@@ -102,20 +102,20 @@ namespace AFK_Bot_for_summoners_rift
         {
             if (Game.MapId != GameMapId.SummonersRift)
             {
-                Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners lift:</b></font> You have to be in Summoner's rift to use this assembly.");
+                Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners rift:</b></font> You have to be in Summoner's rift to use this assembly.");
                 return;
             }
 
             if (!ObjectManager.Player.IsRanged)
             {
-                Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners lift:</b></font> You have to be a ranged champion to use this assembly.");
+                Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners rift:</b></font> You have to be a ranged champion to use this assembly.");
                 return;
             }
 
             Game.OnEnd += Game_OnEnd;
             Game.OnUpdate += Game_OnUpdate;
 
-            Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners lift:</b></font> Loaded.");
+            Game.PrintChat("<font color = \"#00D8FF\"><b>AFK Bot for summoners rift:</b></font> Loaded.");
         }
 
         private static void Game_OnEnd(GameEndEventArgs args)
